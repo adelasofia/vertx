@@ -1,0 +1,37 @@
+.navbar.navbar-default.navbar-fix#sticky-navbar
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar-1")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand(href="#")
+        %img(alt="Brand" src="assets/logo-sm.png")
+    .collapse.navbar-collapse#navbar-1
+      %ul.nav.navbar-nav
+
+        -# %li.dropdown
+        -#   %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+        -#     = precede 'Community ' do
+        -#       %b.caret>
+        -#   %ul.dropdown-menu
+        -#     %li<
+        -#       %a(href="#") Overview
+        -#     %li<
+        -#       %a(href="#") Wiki
+        -# %li.divider
+
+      %ul.nav.navbar-nav.navbar-right
+        %li{:class=>"#{'active' if page.output_path.start_with?('/vertx-home') }" }<
+          %a(href="#{site.base_url}/vertx-home.html") HOME
+        %li{:class=>"#{'active' if page.output_path.start_with?('/download') }" }<
+          %a(href="#{site.base_url}/download.html") DOWNLOAD
+        %li{:class=>"#{'active' if page.output_path.start_with?('/learn') }" }<
+          %a(href="#{site.base_url}/learn.html") LEARN
+        %li{:class=>"#{'active' if page.output_path.start_with?('/community') }" }<
+          %a(href="#{site.base_url}/community.html") COMMUNITY
+        %li{:class=>"#{'active' if page.output_path.start_with?('/code') }" }<
+          %a(href="#{site.base_url}/code.html") CODE
+        %li{:class=>"#{'active' if page.output_path.start_with?('/followus') }" }<
+          %a(href="#{site.base_url}/followus.html") FOLLOW US
+-# = breadcrumb(page.real_page.output_path)
