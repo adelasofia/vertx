@@ -1,26 +1,13 @@
-.navbar.navbar-default.navbar-fix#sticky-navbar
+.navbar.navbar-default.navbar-fixed#sticky-navbar
   .container
     .navbar-header
       %button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar-1")
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand(href="#")
+      %a.navbar-brand(href="#{site.base_url}/vertx-home.html")
         %img(alt="Brand" src="assets/logo-sm.png")
     .collapse.navbar-collapse#navbar-1
-      %ul.nav.navbar-nav
-
-        -# %li.dropdown
-        -#   %a.dropdown-toggle(href="#" data-toggle="dropdown")<
-        -#     = precede 'Community ' do
-        -#       %b.caret>
-        -#   %ul.dropdown-menu
-        -#     %li<
-        -#       %a(href="#") Overview
-        -#     %li<
-        -#       %a(href="#") Wiki
-        -# %li.divider
-
       %ul.nav.navbar-nav.navbar-right
         %li{:class=>"#{'active' if page.output_path.start_with?('/vertx-home') }" }<
           %a(href="#{site.base_url}/vertx-home.html") HOME
